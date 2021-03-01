@@ -140,26 +140,19 @@ This list is not very well ordered. I'm mainly picking up things that seem
 interesting or useful, or where I've gotten a request to fix something/example
 of something that's broken.
 
-- Text support (partially implemented).
 - Support Radial gradients that use percentages in the offsets.
 - Dash path with percentage dasharray values (need good examples).
-- Display/visibility support. My hunch is that this is usually used more for SVG
-  specific interactivity, which isn't supported or planned.
-- Inheritance of inheritable properties (~~necessary? preprocess?~~ significant
-  progress, still some rough edges, particularly for definitions).
-- Support for minimal CSS/styles? See also [usvg](https://github.com/RazrFalcon/resvg/tree/master/usvg)
-  (partial style attribute mostly supported).
 - Markers.
 - Filters/effects (will require upstream engine changes, but doable).
 - Android Vector Drawable support beyond PoC - I'm willing to put more time into
   this if there's actually demand, but it doesn't come up often.
 
-## Probably out of scope/non-goals
+## Out of scope/non-goals
 
 - SMIL animations. That just seems crazy. I think it'll be possible to animate
   the SVG but probably in a more Flutter driven way.
 - Interactivity/events in SVG.
-- Full (any?) CSS support - preprocess your SVGs (perhaps with [usvg](https://github.com/RazrFalcon/resvg/tree/master/usvg) or [scour](https://github.com/scour-project/scour) to get rid of all CSS?).
+- Any CSS support - preprocess your SVGs (perhaps with [usvg](https://github.com/RazrFalcon/resvg/tree/master/usvg) or [scour](https://github.com/scour-project/scour) to get rid of all CSS?).
 - Scripting in SVGs
 - Foreign elements
 - Rendering properties/hints
@@ -196,3 +189,8 @@ licensed under the Apache license.
 Please submit SVGs this can't render properly (e.g. that don't render here the
 way they do in chrome), as long as they're not using anything "probably out of
 scope" (above).
+
+## Alternatives
+
+- [Rive](https://rive.app/) supports importing SVGs and animating vector graphics.
+- [FlutterShapeMaker](https://fluttershapemaker.com) supports converting SVGs to [CustomPaint](https://api.flutter.dev/flutter/widgets/CustomPaint-class.html) widgets.
